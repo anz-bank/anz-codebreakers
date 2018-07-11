@@ -1,0 +1,21 @@
+{
+  "name": "anz-codebreakers",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@anz/icon": "^0.4.5",
+    "@anz/masthead": "^0.3.13",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.1",
+    "standard": "^11.0.1",
+    "styled-components": "^3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
