@@ -1,9 +1,11 @@
 import React from 'react'
+
 import Masthead from '@anz/masthead'
-import Footer from '@anz/footer'
+
+import { AnzAppWrapper, StickyFooter, MainWrapper } from './App.styles'
 
 const App = () => (
-  <div>
+  <AnzAppWrapper>
     <Masthead
       hero={{
         title: 'ANZ Codebreakers',
@@ -12,8 +14,9 @@ const App = () => (
         show: true
       }}
     />
-    <Footer />
-  </div>
+    <MainWrapper />
+    <StickyFooter />
+  </AnzAppWrapper>
 )
 
 export default App
