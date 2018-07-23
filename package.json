@@ -2,7 +2,7 @@
   "name": "anz-codebreakers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anz-bank.github.io/anz-codebreakers/public/",
+  "homepage": "https://anz-bank.github.io/anz-codebreakers/",
   "dependencies": {
     "@anz/button": "^0.7.1",
     "@anz/error": "^0.4.1",
