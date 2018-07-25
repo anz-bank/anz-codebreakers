@@ -10,6 +10,8 @@ import Hard from './components/hard'
 
 import { AnzAppWrapper, StickyFooter, MainWrapper } from './App.styles'
 
+const inSubDir = document.location.pathname.match(/anz-codebreakers/)
+
 const App = () => (
   <AnzAppWrapper>
     <Masthead
@@ -22,7 +24,7 @@ const App = () => (
       }}
     />
     <MainWrapper>
-      <Router>
+      <Router basepath={inSubDir ? '/anz-codebreakers' : '/'}>
         <Home path='/' />
         <Easy path='easy' />
         <Medium path='medium' />

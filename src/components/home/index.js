@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from '@reach/router'
 
 import { AnzGrid, AnzRow, AnzCol } from '@anz/grid'
 import Text from '@anz/text'
@@ -7,7 +6,7 @@ import Button from '@anz/button'
 
 import Emoji from '../../utils/emoji-builder.js'
 
-const Home = () => (
+const Home = ({ navigate }) => (
   <AnzGrid fluid maxWidth='auto'>
     <AnzRow>
       <AnzCol xs={12}>
