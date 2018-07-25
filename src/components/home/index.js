@@ -10,10 +10,21 @@ const Home = ({ navigate }) => (
   <AnzGrid fluid maxWidth='auto'>
     <AnzRow>
       <AnzCol xs={12}>
-        <Text heading>Home</Text>
-        <Button id='nav-easy' onClick={() => navigate('easy')} icon={<Emoji code='1F600' />}>Easy</Button>
-        <Button id='nav-medium' onClick={() => navigate('medium')} icon={<Emoji code='1F611' />}>Medium</Button>
-        <Button id='nav-hard' onClick={() => navigate('hard')} icon={<Emoji code='1F612' />}>Hard</Button>
+        <Text heading><Emoji src='🏠' /> Home</Text>
+      </AnzCol>
+    </AnzRow>
+    <AnzRow>
+      <AnzCol xs={12} md={4}>
+        <Text heading='2'>Easy</Text>
+        <Button id='nav-easy' size='large' onClick={() => navigate('easy')} fullWidth icon={<Emoji src='🍼' />}>Let's have a go!</Button>
+      </AnzCol>
+      <AnzCol xs={12} md={4}>
+        <Text heading='2'>Medium</Text>
+        <Button id='nav-medium' size='large' onClick={() => navigate('medium')} fullWidth icon={<Emoji src='🍵' />}>Time to step it up!</Button>
+      </AnzCol>
+      <AnzCol xs={12} md={4}>
+        <Text heading='2'>Hard</Text>
+        <Button id='nav-hard' size='large' onClick={() => navigate('hard')} fullWidth icon={<Emoji src='☕' />}>Give me a challenge!</Button>
       </AnzCol>
     </AnzRow>
   </AnzGrid>

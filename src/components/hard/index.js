@@ -11,7 +11,7 @@ const Hard = ({ navigate }) => (
     <AnzRow>
       <AnzCol xs={12}>
         <Text heading>Hard</Text>
-        <Button id='back-to-home' appearance='ghost' onClick={() => navigate('../')} icon={<Emoji code='1F3E1' />}>Back to home</Button>
+        <Button id='back-to-home' appearance='ghost' onClick={() => navigate('../')} icon={<Emoji src='🏠' />}>Back to home</Button>
       </AnzCol>
     </AnzRow>
   </AnzGrid>

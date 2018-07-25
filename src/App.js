@@ -18,8 +18,8 @@ const App = () => (
     <Masthead
       maxWidth='auto'
       hero={{
-        title: 'ANZ Codebreakers',
-        subtitle: 'Go Girl Go for IT!',
+        title: 'Codebreakers',
+        subtitle: 'Go Girl Go for IT and ANZ',
         image: banner,
         show: true
       }}

@@ -8,25 +8,42 @@ const twemojiSettings = {
   ext: '.svg'
 }
 
-const Emoji = ({ code }) => (
-  parser(
-    twemoji.parse(
-      twemoji.convert.fromCodePoint(code),
-      twemojiSettings
+const Emoji = ({ code, src }) => {
+  const emoji = src || twemoji.convert.fromCodePoint(code)
+
+  return (
+    parser(
+      twemoji.parse(
+        emoji,
+        twemojiSettings
+      )
     )
   )
-)
+}
 
 const EmojiWrapper = styled.span`
   .emoji {
     display: inline-block;
-    height: ${({size}) => size || '1rem'};
-    width: ${({size}) => size || '1rem'};
-    margin-right: ${({size}) => size ? size / 2 : '0.5rem'};
+    height: ${({size}) => size || '1em'};
+    width: ${({size}) => size || '1em'};
+    margin-right: ${({size}) => size ? size / 2 : '0.5em'};
     transform: translateY(0.125rem);
   }
 `
 
-const WrappedEmoji = ({ code, size }) => <EmojiWrapper size={size}><Emoji code={code} /></EmojiWrapper>
+const WrappedEmoji = ({ code, src, size }) => {
+  const wrapperProps = {}
+  if (size) wrapperProps.size = size
+
+  const emojiProps = {}
+  if (code) emojiProps.code = code
+  if (src) emojiProps.src = src
+
+  return (
+    <EmojiWrapper {...wrapperProps}>
+      <Emoji {...emojiProps} />
+    </EmojiWrapper>
+  )
+}
 
 export default WrappedEmoji
