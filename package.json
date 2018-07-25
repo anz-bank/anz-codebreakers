@@ -12,6 +12,9 @@
     "@anz/text-field": "^0.7.1",
     "@anz/typekit": "^0.1.1",
     "@anz/validation": "^0.3.1",
+    "@reach/router": "^1.1.1",
+    "html-react-parser": "^0.4.6",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
@@ -20,7 +23,8 @@
     "standard": "^11.0.1",
     "styled-components": "^3.3.3",
     "styled-normalize": "^8.0.0",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "twemoji": "^11.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
