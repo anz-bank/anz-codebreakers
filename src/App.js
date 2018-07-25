@@ -2,6 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 
 import Masthead from '@anz/masthead'
+import banner from './assets/US_Navy_Cryptanalytic_Bombe.jpg'
 
 import Home from './components/home'
 import Easy from './components/easy'
@@ -19,7 +20,7 @@ const App = () => (
       hero={{
         title: 'ANZ Codebreakers',
         subtitle: 'Go Girl Go for IT!',
-        image: 'https://placeimg.com/1000/480/tech',
+        image: banner,
         show: true
       }}
     />
