@@ -3,23 +3,30 @@ import { compose, withStateHandlers } from 'recompose'
 
 import Emoji from '../emoji'
 
-import { Character, InteractiveWrapper } from './styles'
+import { Character, InteractiveWrapper, HiddenInput } from './styles'
 
 const enhance = compose(
   withStateHandlers(
-    ({ character }) => ({ solved: false, character: character }),
+    ({ character }) => ({ solved: false, character: character, inputRef: null }),
     {
-      test: ({ character }) => (event) => (event.key === character && { solved: true })
+      test: ({ character }) => (event) => (event.key === character && { solved: true }),
+      setInputRef: () => (elem) => ({ inputRef: elem })
     }
   )
 )
 
-const CodeSymbol = ({ emoji, character, solved, test }) => {
+const focusInput = (inputRef) => {
+  inputRef.focus()
+}
+
+const CodeSymbol = ({ emoji, character, solved, test, inputRef, setInputRef }) => {
+  console.log(inputRef)
   if (solved) {
     return <Character>{character}</Character>
   } else {
     return (
-      <InteractiveWrapper onKeyPress={test} contentEditable>
+      <InteractiveWrapper onClick={() => focusInput(inputRef)}>
+        <HiddenInput contentEditable onKeyPress={test} innerRef={setInputRef} />
         <Emoji src={emoji} block />
       </InteractiveWrapper>
     )

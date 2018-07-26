@@ -11,6 +11,7 @@ export const Character = styled.span`
 export const InteractiveWrapper = styled.span`
   outline: none;
   display: inline-block;
+  position: relative;
   cursor: pointer;
   font-size: 1.5rem;
   padding: 0.25rem;
@@ -21,6 +22,23 @@ export const InteractiveWrapper = styled.span`
   transition: background-color 0.2s;
   
   &:hover,
+  &:focus {
+    background-color: #007DBA;
+  }
+`
+
+export const HiddenInput = styled.span`
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+
   &:focus {
     background-color: #007DBA;
   }
