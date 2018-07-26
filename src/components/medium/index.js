@@ -5,7 +5,7 @@ import Text from '@anz/text'
 import Button from '@anz/button'
 import Section from '@anz/section'
 
-import Emoji from '../../utils/emoji-builder.js'
+import Emoji from '../emoji'
 
 import { MediumGrid, MediumCol } from './styles'
 
