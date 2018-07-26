@@ -16,10 +16,10 @@ const inSubDir = document.location.pathname.match(/anz-codebreakers/)
 const App = () => (
   <AnzAppWrapper>
     <Masthead
-      maxWidth='auto'
+      maxWidth='1366'
       hero={{
         title: 'Codebreakers',
-        subtitle: 'Go Girl Go for IT and ANZ',
+        subtitle: 'Go Girl, Go For IT and ANZ',
         image: banner,
         show: true
       }}
@@ -32,7 +32,7 @@ const App = () => (
         <Hard path='hard' />
       </Router>
     </MainWrapper>
-    <StickyFooter maxWidth='auto' />
+    <StickyFooter maxWidth='1366' />
   </AnzAppWrapper>
 )
 

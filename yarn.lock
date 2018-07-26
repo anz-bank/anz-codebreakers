@@ -2,75 +2,83 @@
 # yarn lockfile v1
 
 
-"@anz/button@^0.7.1":
-  version "0.7.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/button/-/@anz/button-0.7.1.tgz#d623ba8ccee82829ef23c6b7539e2d3f76e49e4b"
+"@anz/button@^0.7.2":
+  version "0.7.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/button/-/@anz/button-0.7.2.tgz#cb7ed49e21f98d426681e3aafee2c4ef08143640"
   dependencies:
-    "@anz/icon" "^0.6.1"
+    "@anz/icon" "^0.6.2"
     "@anz/styles-global" "^0.4.1"
 
-"@anz/card-hero@^0.5.1":
-  version "0.5.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/card-hero/-/@anz/card-hero-0.5.1.tgz#0984eb283adca4cd3e07dbcfcf8e9e31ac9dd47b"
+"@anz/card-hero@^0.5.2":
+  version "0.5.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/card-hero/-/@anz/card-hero-0.5.2.tgz#1621d636853e2a0432e3b694e7e117765aa67972"
   dependencies:
-    "@anz/grid" "^0.3.1"
+    "@anz/grid" "^0.3.2"
     "@anz/styles-global" "^0.4.1"
 
-"@anz/error@^0.4.1":
-  version "0.4.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/error/-/@anz/error-0.4.1.tgz#05160b5e11719072fede2284f8241a8363cda1ff"
+"@anz/error@^0.4.2":
+  version "0.4.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/error/-/@anz/error-0.4.2.tgz#5baf09c1b2c8f93932a509d76491c76a084d95f8"
   dependencies:
-    "@anz/grid" "^0.3.1"
+    "@anz/grid" "^0.3.2"
     "@anz/styles-global" "^0.4.1"
-    "@anz/text" "^0.3.1"
+    "@anz/text" "^0.3.2"
 
-"@anz/footer@^0.5.1":
-  version "0.5.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/footer/-/@anz/footer-0.5.1.tgz#59bd6403be586a657e549bb2744e44d65523fb95"
+"@anz/footer@^0.5.2":
+  version "0.5.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/footer/-/@anz/footer-0.5.2.tgz#68f9923ca61cff3236e4180b26407a236cb1abfe"
   dependencies:
-    "@anz/grid" "^0.3.1"
-    "@anz/icon" "^0.6.1"
+    "@anz/grid" "^0.3.2"
+    "@anz/icon" "^0.6.2"
     "@anz/styles-global" "^0.4.1"
-    "@anz/text" "^0.3.1"
+    "@anz/text" "^0.3.2"
 
-"@anz/grid@^0.3.1":
-  version "0.3.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/grid/-/@anz/grid-0.3.1.tgz#6ea654f04a24cd7704fda559c791a620742453dd"
+"@anz/grid@^0.3.2":
+  version "0.3.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/grid/-/@anz/grid-0.3.2.tgz#fb24acbc995d3b3471bb284500233f59429c7482"
 
-"@anz/header@^0.3.1":
-  version "0.3.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/header/-/@anz/header-0.3.1.tgz#af83f8334a80fc7141eeff6d04339046bef3f271"
+"@anz/header@^0.3.2":
+  version "0.3.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/header/-/@anz/header-0.3.2.tgz#c94bf48258ce3ba496160ae20d580ca781576022"
   dependencies:
-    "@anz/grid" "^0.3.1"
+    "@anz/grid" "^0.3.2"
     "@anz/styles-global" "^0.4.1"
 
-"@anz/hero-banner@^0.4.1":
-  version "0.4.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/hero-banner/-/@anz/hero-banner-0.4.1.tgz#b84fcaebd84b738ae58cc1a9a5f6e94469051fce"
+"@anz/hero-banner@^0.4.2":
+  version "0.4.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/hero-banner/-/@anz/hero-banner-0.4.2.tgz#2f0ef382ed81c086b16fd6fd5905b39e3cdb4c75"
   dependencies:
-    "@anz/grid" "^0.3.1"
+    "@anz/grid" "^0.3.2"
     "@anz/styles-global" "^0.4.1"
 
 "@anz/icon@^0.6.1":
   version "0.6.1"
   resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/icon/-/@anz/icon-0.6.1.tgz#a8b9f687d2edb0fccc1224a7fc92b824f90f6de2"
 
-"@anz/masthead@^0.5.1":
-  version "0.5.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/masthead/-/@anz/masthead-0.5.1.tgz#e48cd7aeef9f9f85a520dba8d4b9ebf88846519f"
+"@anz/icon@^0.6.2":
+  version "0.6.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/icon/-/@anz/icon-0.6.2.tgz#9bcf380b0f8c9a5dc6fc5b82b663721eb08ec009"
+
+"@anz/masthead@^0.5.2":
+  version "0.5.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/masthead/-/@anz/masthead-0.5.2.tgz#4d6074fb0fe07998781acc84d6f36e8d251ecd73"
   dependencies:
-    "@anz/card-hero" "^0.5.1"
-    "@anz/header" "^0.3.1"
-    "@anz/hero-banner" "^0.4.1"
-    "@anz/progress-bar" "^0.5.1"
+    "@anz/card-hero" "^0.5.2"
+    "@anz/header" "^0.3.2"
+    "@anz/hero-banner" "^0.4.2"
+    "@anz/progress-bar" "^0.5.2"
     "@anz/styles-global" "^0.4.1"
 
-"@anz/progress-bar@^0.5.1":
-  version "0.5.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/progress-bar/-/@anz/progress-bar-0.5.1.tgz#e1c400cc65e7f225a72dac61107b7a6bdd36f33b"
+"@anz/progress-bar@^0.5.2":
+  version "0.5.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/progress-bar/-/@anz/progress-bar-0.5.2.tgz#6562a2e6329a2a493e5261bd4ccf23ac884447c3"
   dependencies:
-    "@anz/grid" "^0.3.1"
+    "@anz/grid" "^0.3.2"
     "@anz/styles-global" "^0.4.1"
+
+"@anz/section@^0.5.2":
+  version "0.5.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/section/-/@anz/section-0.5.2.tgz#78c266a94f5bc68963c2f5f01a24599d0b64fb19"
 
 "@anz/styles-global@^0.4.1":
   version "0.4.1"
@@ -78,18 +86,18 @@
   dependencies:
     "@anz/typekit" "^0.1.1"
 
-"@anz/text-field@^0.7.1":
-  version "0.7.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/text-field/-/@anz/text-field-0.7.1.tgz#d2dac0b8b92205da837f6a7a702210dcab288a6f"
+"@anz/text-field@^0.7.2":
+  version "0.7.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/text-field/-/@anz/text-field-0.7.2.tgz#2286aa3defc7ceece0aefd10e7b188b3b98fe18d"
   dependencies:
-    "@anz/icon" "^0.6.1"
+    "@anz/icon" "^0.6.2"
     "@anz/styles-global" "^0.4.1"
-    "@anz/text" "^0.3.1"
-    "@anz/validation" "^0.3.1"
+    "@anz/text" "^0.3.2"
+    "@anz/validation" "^0.3.2"
 
-"@anz/text@^0.3.1":
-  version "0.3.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/text/-/@anz/text-0.3.1.tgz#31c7f578cc6cb34f08e1d1783cc6787710af04e4"
+"@anz/text@^0.3.2":
+  version "0.3.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/text/-/@anz/text-0.3.2.tgz#33c1ca9cdf3dad0e2be369d45969181f0afe9ec5"
   dependencies:
     "@anz/styles-global" "^0.4.1"
 
@@ -97,9 +105,9 @@
   version "0.1.1"
   resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/typekit/-/@anz/typekit-0.1.1.tgz#de787b8bd9b561a2d4c1d8b5e9935a7051afe87b"
 
-"@anz/validation@^0.3.1":
-  version "0.3.1"
-  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/validation/-/@anz/validation-0.3.1.tgz#ac00c1ecc43d70671101c2795378d1505b669b5f"
+"@anz/validation@^0.3.2":
+  version "0.3.2"
+  resolved "https://dcartifactory.service.dev/artifactory/api/npm/anzdesignsystem-npm/@anz/validation/-/@anz/validation-0.3.2.tgz#ddf78ac3bf08e1e4980638b7e7dccf2166f902fc"
   dependencies:
     "@anz/styles-global" "^0.4.1"
 
