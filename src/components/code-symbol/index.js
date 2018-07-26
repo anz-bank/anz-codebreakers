@@ -19,7 +19,7 @@ const CodeSymbol = ({ emoji, character, solved, test }) => {
     return <Character>{character}</Character>
   } else {
     return (
-      <InteractiveWrapper onKeyPress={test} tabIndex='0'>
+      <InteractiveWrapper onKeyPress={test} contentEditable>
         <Emoji src={emoji} block />
       </InteractiveWrapper>
     )
