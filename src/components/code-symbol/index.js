@@ -9,7 +9,7 @@ const enhance = compose(
   withStateHandlers(
     ({ character }) => ({ solved: false, character: character, inputRef: null }),
     {
-      test: ({ character }) => (event) => (event.key === character && { solved: true }),
+      test: ({ character }) => (event) => (String.fromCharCode(event.charCode) === character && { solved: true }),
       setInputRef: () => (elem) => ({ inputRef: elem })
     }
   )
