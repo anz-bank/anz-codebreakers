@@ -9,7 +9,7 @@ const enhance = compose(
   withStateHandlers(
     ({ character }) => ({ solved: false, character: character, inputRef: null }),
     {
-      test: ({ character }) => (event) => (String.fromCharCode(event.charCode) === character && { solved: true }),
+      test: ({ character }) => (event) => (event.nativeEvent.data === character && { solved: true }),
       setInputRef: () => (elem) => ({ inputRef: elem })
     }
   )
@@ -20,13 +20,12 @@ const focusInput = (inputRef) => {
 }
 
 const CodeSymbol = ({ emoji, character, solved, test, inputRef, setInputRef }) => {
-  console.log(inputRef)
   if (solved) {
     return <Character>{character}</Character>
   } else {
     return (
       <InteractiveWrapper onClick={() => focusInput(inputRef)}>
-        <HiddenInput contentEditable onKeyPress={test} innerRef={setInputRef} />
+        <HiddenInput type='text' onChange={(event) => test(event)} innerRef={setInputRef} />
         <Emoji src={emoji} block />
       </InteractiveWrapper>
     )

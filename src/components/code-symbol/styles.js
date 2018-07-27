@@ -18,7 +18,6 @@ export const InteractiveWrapper = styled.span`
   border-radius: 0.25rem;
   background-color: #FFF;
   text-align: center;
-  color: transparent;
   transition: background-color 0.2s;
   
   &:hover,
@@ -27,7 +26,9 @@ export const InteractiveWrapper = styled.span`
   }
 `
 
-export const HiddenInput = styled.span`
+export const HiddenInput = styled.input`
+  padding: 0;
+  border: 0;
   display: block;
   position: absolute;
   top: 0;
@@ -38,6 +39,8 @@ export const HiddenInput = styled.span`
   background-color: transparent;
   border-radius: 0.25rem;
   transition: background-color 0.2s;
+  width: 100%;
+  color: transparent;
 
   &:focus {
     background-color: #007DBA;
