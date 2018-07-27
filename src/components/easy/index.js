@@ -20,7 +20,7 @@ const Easy = ({ navigate }) => (
     <AnzRow>
       <EasyCol xs={12}>
         <Section id='easy-section'>
-          <CodeMachine message='Our purpose is to shape a world where people and communities thrive. Our people are proud to help people achieve incredible things – be it buying their home, building a business or saving for things big or small.' />
+          <CodeMachine message='Go Girl, Go For IT!' />
         </Section>
       </EasyCol>
     </AnzRow>

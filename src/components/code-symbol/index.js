@@ -18,13 +18,13 @@ const focusInput = (inputRef) => {
   inputRef.focus()
 }
 
-const CodeSymbol = ({ emoji, character, solved, solveChar, inputRef, setInputRef }) => {
+const CodeSymbol = ({ emoji, character, solved, solveChar, inputRef, setInputRef, stopTimer, updateScore }) => {
   if (solved) {
     return <Character>{character}</Character>
   } else {
     return (
       <InteractiveWrapper onClick={() => focusInput(inputRef)}>
-        <HiddenInput type='text' onChange={(event) => solveChar(event, character)} innerRef={setInputRef} />
+        <HiddenInput type='text' onChange={event => solveChar(event, character, stopTimer, updateScore)} innerRef={setInputRef} />
         <Emoji src={emoji} block />
       </InteractiveWrapper>
     )

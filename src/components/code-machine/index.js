@@ -1,60 +1,52 @@
 import React from 'react'
-import emojis from 'emoji.json/emoji-compact.json'
-import { compose, withStateHandlers, lifecycle } from 'recompose'
 import find from 'lodash/find'
-import cloneDeep from 'lodash/cloneDeep'
+import filter from 'lodash/filter'
+
+import Text from '@anz/text'
+import Button from '@anz/button'
 
 import CodeSymbol from '../code-symbol'
+import Hint from '../hint'
+import Timer from '../timer'
+import Score from '../score'
 
-import { Spacer } from './styles'
+import enhance from './index.hoc'
+import { Spacer, GameHeaderCol, GameHeaderRow, GameWrapper, SolvedMessage } from './styles'
 
-const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
-
-const enhance = compose(
-  withStateHandlers(
-    { code: [], messageArray: [] },
-    {
-      getEmoji: ({ code }) => (character) => {
-        if (!find(code, emoji => emoji.character === character)) {
-          let emojiNumber = getRandomInt(150)
-          while (find(code, emoji => emojiNumber === emoji.number)) {
-            emojiNumber = getRandomInt(150)
-          }
-          code.push({ number: emojiNumber, emoji: emojis[emojiNumber], character: character, solved: false })
-          return { code: code }
-        }
-      },
-      setMessageArray: () => (messageArray) => ({ messageArray: messageArray }),
-      solveChar: ({ code }) => (event, character) => {
-        if (event.nativeEvent.data === character) {
-          const newCode = cloneDeep(code)
-          const symbol = find(newCode, emoji => emoji.character === event.nativeEvent.data)
-          symbol.solved = true
-          console.log(newCode)
-          return { code: newCode }
-        }
-      }
-    }
-  ),
-  lifecycle({
-    componentDidMount () {
-      let messageArray = this.props.message.split('')
-      messageArray.map(character => this.props.getEmoji(character))
-      this.props.setMessageArray(messageArray)
-    }
-  })
-)
-
-const CodeMachine = ({ code, messageArray, solveChar }) => (
+const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startTimer, timeLeft, updateTimer, score, updateScore, finished, solveAll }) => (
   <React.Fragment>
-    {messageArray.map((char, index) => {
-      const symbol = find(code, emoji => emoji.character === char)
-      return symbol.character !== ' ' ? (
-        <CodeSymbol key={index} {...symbol} solveChar={solveChar} />
-      ) : (
-        <Spacer key={index} />
-      )
-    })}
+    <GameHeaderRow>
+      <GameHeaderCol xs={6} md={4}>
+        <Score score={score} />
+      </GameHeaderCol>
+      <GameHeaderCol xs={6} md={4}>
+        <Timer {...{ started, finished, startTimer, timeLeft, updateTimer, stopTimer }} />
+      </GameHeaderCol>
+      <GameHeaderCol xs={12} md={4}>
+        <Hint solveChar={solveChar} code={code} stopTimer={stopTimer} started={started} updateScore={updateScore} />
+      </GameHeaderCol>
+    </GameHeaderRow>
+    <GameWrapper>
+      {(started || finished) ? messageArray.map((char, index) => {
+        const symbol = find(code, emoji => emoji.character === char)
+        return symbol.character !== ' ' ? (
+          <CodeSymbol key={index} {...symbol} solveChar={solveChar} stopTimer={stopTimer} updateScore={updateScore} />
+        ) : (
+          <Spacer key={index} />
+        )
+      }) : (
+        <Text>Tap the Go! button to break the code!</Text>
+      )}
+      {finished && (
+        filter(code, emoji => emoji.solved === false).length > 1 ? (
+          <div>
+            <Button type='button' id='solve-all-button' onClick={solveAll}>See the coded message.</Button>
+          </div>
+        ) : (
+          <SolvedMessage>Great work, you broke the code!</SolvedMessage>
+        )
+      )}
+    </GameWrapper>
   </React.Fragment>
 )
 
