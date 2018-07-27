@@ -45,7 +45,7 @@ const Home = ({ navigate }) => (
           <Text heading='2'>Go Girl, Go For IT!</Text>
           <Text>Every 2 years, the Victorian ICT for Women network runs the event for all Victorian school girls in years 5 to 12 to hear about the incredible range of vocational avenues available in IT.</Text>
           <Text>ANZ has created this game for the event that is taking place on Thursday 16 August 2018 at Deakin University, Burwood Campus.</Text>
-          <Text>Find out more about the great work done the by the Go Girl, Go For IT team <a href='https://www.gogirl.org.au/' target='_blank' rel='noopener'>on their website</a>.</Text>
+          <Text>Find out more about the great work done the by the Go Girl, Go For IT team <a href='https://www.gogirl.org.au/' target='_blank' rel='noopener noreferrer'>on their website</a>.</Text>
         </Section>
       </HomeCol>
     </AnzRow>
