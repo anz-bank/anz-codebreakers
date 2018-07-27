@@ -7,7 +7,7 @@ import { TimerText } from './styles'
 const Timer = ({ timeLeft, updateTimer, startTimer, started, finished, stopTimer }) => (
   <React.Fragment>
     {(started || finished) ? (
-      <TimerText timeLeft={timeLeft}>{timeLeft > 0 ? timeLeft : `Time's up`}</TimerText>
+      <TimerText timeLeft={timeLeft}>{timeLeft > 0 ? `Time left: ${timeLeft}` : `Time's up`}</TimerText>
     ) : (
       <Button id='start-button' type='button' appearance='action' onClick={() => startTimer(updateTimer, stopTimer)}>Go!</Button>
     )}

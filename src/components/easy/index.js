@@ -14,7 +14,7 @@ const Easy = ({ navigate }) => (
   <EasyGrid fluid maxWidth='1366'>
     <AnzRow>
       <AnzCol xs={12}>
-        <Text heading><Emoji src='🍼' /> Easy</Text>
+        <Text heading><Emoji src='😄' /> Easy</Text>
       </AnzCol>
     </AnzRow>
     <AnzRow>

@@ -23,16 +23,17 @@ const enhance = compose(
         }
       },
       setMessageArray: () => (messageArray) => ({ messageArray: messageArray }),
-      solveChar: ({ code, started, score, timeLeft, finished }) => (event, character, stopTimer, updateScore) => {
-        if (started && event.nativeEvent.data === character) {
+      solveChar: ({ code, started, score, timeLeft, finished }) => (event, character, stopTimer, updateScore, markSolved, finish) => {
+        if (((started || finish) && event.nativeEvent.data === character)) {
           const newCode = cloneDeep(code)
           const symbol = find(newCode, emoji => emoji.character === event.nativeEvent.data)
           symbol.solved = true
           const remaining = filter(newCode, emoji => emoji.solved === false).length
-          if (remaining === 1) {
+          if (remaining === 1 && !finished) {
             stopTimer()
             updateScore(score + timeLeft + 5)
-          } else if (!event.isHint) updateScore(score + 5)
+            markSolved()
+          } else if (!event.hintUsed && !finished) updateScore(score + 5)
           return { code: newCode }
         }
       },
@@ -58,9 +59,10 @@ const enhance = compose(
         const remainingCode = filter(code, emoji => emoji.solved === false)
         remainingCode.forEach(emoji => {
           const syntheticEvent = { nativeEvent: { data: emoji.character }, hintUsed: true }
-          solveChar(syntheticEvent, emoji.character, stopTimer, updateScore)
+          solveChar(syntheticEvent, emoji.character, stopTimer, updateScore, () => {}, true)
         })
-      }
+      },
+      markSolved: () => () => ({ solved: true })
     }
   ),
   lifecycle({

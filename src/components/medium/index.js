@@ -14,7 +14,7 @@ const Medium = ({ navigate }) => (
   <MediumGrid fluid maxWidth='1366'>
     <AnzRow>
       <AnzCol xs={12}>
-        <Text heading><Emoji src='🍵' /> Medium</Text>
+        <Text heading><Emoji src='😌' /> Medium</Text>
       </AnzCol>
     </AnzRow>
     <AnzRow>

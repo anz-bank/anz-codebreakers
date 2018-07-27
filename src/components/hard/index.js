@@ -14,7 +14,7 @@ const Hard = ({ navigate }) => (
   <HardGrid fluid maxWidth='1366'>
     <AnzRow>
       <AnzCol xs={12}>
-        <Text heading><Emoji src='☕' /> Hard</Text>
+        <Text heading><Emoji src='🤔' /> Hard</Text>
       </AnzCol>
     </AnzRow>
     <AnzRow>
