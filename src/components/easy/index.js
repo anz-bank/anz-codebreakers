@@ -6,7 +6,7 @@ import Button from '@anz/button'
 import Section from '@anz/section'
 
 import Emoji from '../emoji'
-import CodeSymbol from '../code-symbol'
+import CodeMachine from '../code-machine'
 
 import { EasyGrid, EasyCol } from './styles'
 
@@ -20,12 +20,7 @@ const Easy = ({ navigate }) => (
     <AnzRow>
       <EasyCol xs={12}>
         <Section id='easy-section'>
-          <Text>Demo: the solve is "ANZ"</Text>
-          <div>
-            <CodeSymbol character='A' emoji='😎' />
-            <CodeSymbol character='N' emoji='😭' />
-            <CodeSymbol character='Z' emoji='😜' />
-          </div>
+          <CodeMachine message='Our purpose is to shape a world where people and communities thrive. Our people are proud to help people achieve incredible things – be it buying their home, building a business or saving for things big or small.' />
         </Section>
       </EasyCol>
     </AnzRow>

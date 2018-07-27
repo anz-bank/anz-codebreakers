@@ -4,7 +4,7 @@ export const Character = styled.span`
   font-weight: bold;
   color: #004165;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 0.25rem;
 `
 
@@ -13,7 +13,7 @@ export const InteractiveWrapper = styled.span`
   display: inline-block;
   position: relative;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   background-color: #FFF;
