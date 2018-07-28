@@ -9,3 +9,8 @@ export const HomeCol = styled(AnzCol)`
 export const HomeGrid = styled(AnzGrid)`
   margin-top: 2rem;
 `
+
+export const GoGirlLogo = styled.img`
+  width: 100%;
+  border-radius: 0.125rem;
+`

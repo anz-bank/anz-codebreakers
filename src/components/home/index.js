@@ -7,7 +7,9 @@ import Section from '@anz/section'
 
 import Emoji from '../emoji'
 
-import { HomeGrid, HomeCol } from './styles'
+import goGirlLogo from '../../assets/gogirl-logo.jpg'
+
+import { HomeGrid, HomeCol, GoGirlLogo } from './styles'
 
 const Home = ({ navigate }) => (
   <HomeGrid fluid maxWidth='1366'>
@@ -42,10 +44,17 @@ const Home = ({ navigate }) => (
     <AnzRow>
       <HomeCol xs={12}>
         <Section>
-          <Text heading='2'>Go Girl, Go For IT!</Text>
-          <Text>Every 2 years, the Victorian ICT for Women network runs the event for all Victorian school girls in years 5 to 12 to hear about the incredible range of vocational avenues available in IT.</Text>
-          <Text>ANZ has created this game for the event that is taking place on Thursday 16 August 2018 at Deakin University, Burwood Campus.</Text>
-          <Text>Find out more about the great work done the by the Go Girl, Go For IT team <a href='https://www.gogirl.org.au/' target='_blank' rel='noopener noreferrer'>on their website</a>.</Text>
+          <AnzRow>
+            <AnzCol xs={12} sm={4} md={2}>
+              <GoGirlLogo src={goGirlLogo} alt='Go Girl, Go For IT logo' />
+            </AnzCol>
+            <AnzCol xs={12} sm={8} md={10}>
+              <Text heading='2'>Go Girl, Go For IT!</Text>
+              <Text>Every 2 years, the Victorian ICT for Women network runs the event for all Victorian school girls in years 5 to 12 to hear about the incredible range of vocational avenues available in IT.</Text>
+              <Text>ANZ has created this game for the event that is taking place on Thursday 16 August 2018 at Deakin University, Burwood Campus.</Text>
+              <Text>Find out more about the great work done the by the Go Girl, Go For IT team <a href='https://www.gogirl.org.au/' target='_blank' rel='noopener noreferrer'>on their website</a>.</Text>
+            </AnzCol>
+          </AnzRow>
         </Section>
       </HomeCol>
     </AnzRow>
