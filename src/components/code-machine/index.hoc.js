@@ -13,23 +13,25 @@ const enhance = compose(
     { code: [], messageArray: [], timeLeft: 60, started: false, finished: false, score: 0 },
     {
       getEmoji: ({ code }) => (character) => {
-        if (!find(code, emoji => emoji.character === character)) {
+        if (!find(code, emoji => emoji.character === character.toUpperCase()) && character !== ' ') {
+          const newCode = cloneDeep(code)
           let emojiNumber = getRandomInt(150)
           while (find(code, emoji => emojiNumber === emoji.number)) {
             emojiNumber = getRandomInt(150)
           }
-          code.push({ number: emojiNumber, emoji: emojis[emojiNumber], character: character, solved: false })
-          return { code: code }
+          newCode.push({ number: emojiNumber, emoji: emojis[emojiNumber], character: character.toUpperCase(), solved: false })
+          console.log(newCode)
+          return { code: newCode }
         }
       },
       setMessageArray: () => (messageArray) => ({ messageArray: messageArray }),
       solveChar: ({ code, started, score, timeLeft, finished }) => (event, character, stopTimer, updateScore, markSolved, finish) => {
-        if (((started || finish) && event.nativeEvent.data === character)) {
+        if (((started || finish) && event.nativeEvent.data.toUpperCase() === character.toUpperCase())) {
           const newCode = cloneDeep(code)
-          const symbol = find(newCode, emoji => emoji.character === event.nativeEvent.data)
+          const symbol = find(newCode, emoji => emoji.character.toUpperCase() === event.nativeEvent.data.toUpperCase())
           symbol.solved = true
           const remaining = filter(newCode, emoji => emoji.solved === false).length
-          if (remaining === 1 && !finished) {
+          if (remaining === 0 && !finished) {
             stopTimer()
             updateScore(score + timeLeft + 5)
             markSolved()

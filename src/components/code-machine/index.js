@@ -28,8 +28,9 @@ const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startT
     </GameHeaderRow>
     <GameWrapper>
       {(started || finished) ? messageArray.map((char, index) => {
-        const symbol = find(code, emoji => emoji.character === char)
-        return symbol.character !== ' ' ? (
+        const symbol = find(code, emoji => emoji.character.toUpperCase() === char.toUpperCase())
+        if (char !== ' ') symbol.character = char
+        return char !== ' ' ? (
           <CodeSymbol key={index} {...symbol} solveChar={solveChar} stopTimer={stopTimer} updateScore={updateScore} markSolved={markSolved} />
         ) : (
           <Spacer key={index} />
