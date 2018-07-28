@@ -7,6 +7,7 @@ import Section from '@anz/section'
 
 import Emoji from '../emoji'
 import CodeMachine from '../code-machine'
+import HowToPlay from '../how-to-play'
 
 import { HardGrid, HardCol } from './styles'
 
@@ -24,6 +25,7 @@ const Hard = ({ navigate }) => (
         </Section>
       </HardCol>
     </AnzRow>
+    <HowToPlay />
     <AnzRow>
       <HardCol xs={12}>
         <Button id='back-to-home' appearance='ghost' onClick={() => navigate('../')} icon={<Emoji src='🏠' />}>Back to home</Button>
