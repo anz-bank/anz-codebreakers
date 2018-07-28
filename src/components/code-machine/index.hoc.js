@@ -33,8 +33,8 @@ const enhance = compose(
           const remaining = filter(newCode, emoji => emoji.solved === false).length
           if (remaining === 0 && !finished) {
             stopTimer()
-            updateScore(score + timeLeft + 5)
             markSolved()
+            if (!event.hintUsed && !finished) updateScore(score + timeLeft + 5)
           } else if (!event.hintUsed && !finished) updateScore(score + 5)
           return { code: newCode }
         }

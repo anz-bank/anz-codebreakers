@@ -10,15 +10,15 @@ import { HintText } from './styles'
 
 const enhance = compose(
   withStateHandlers(
-    ({ solveChar, updateScore, stopTimer }) => ({ hintsLeft: 3, solveChar, stopTimer, updateScore }),
+    ({ solveChar, updateScore, stopTimer, markSolved }) => ({ hintsLeft: 3, solveChar, stopTimer, updateScore, markSolved }),
     {
       hintUsed: ({ hintsLeft }) => () => ({ hintsLeft: hintsLeft - 1 }),
-      useHint: ({ solveChar, updateScore, stopTimer }) => (hintUsed, code) => {
+      useHint: ({ solveChar, updateScore, stopTimer, markSolved }) => (hintUsed, code) => {
         const unsolvedCode = filter(code, emoji => emoji.solved === false)
         const emoji = unsolvedCode[getRandomInt(unsolvedCode.length - 1)]
         const syntheticEvent = { nativeEvent: { data: emoji.character }, hintUsed: true }
         hintUsed()
-        solveChar(syntheticEvent, emoji.character, stopTimer, updateScore)
+        solveChar(syntheticEvent, emoji.character, stopTimer, updateScore, markSolved)
       }
     }
   )

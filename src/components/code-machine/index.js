@@ -23,7 +23,7 @@ const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startT
         <Timer {...{ started, finished, startTimer, timeLeft, updateTimer, stopTimer }} />
       </GameHeaderCol>
       <GameHeaderCol xs={12} md={4}>
-        <Hint solveChar={solveChar} code={code} stopTimer={stopTimer} started={started} updateScore={updateScore} />
+        <Hint solveChar={solveChar} code={code} stopTimer={stopTimer} started={started} updateScore={updateScore} markSolved={markSolved} />
       </GameHeaderCol>
     </GameHeaderRow>
     <GameWrapper>
