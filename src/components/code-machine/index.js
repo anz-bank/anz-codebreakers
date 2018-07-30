@@ -11,7 +11,7 @@ import Timer from '../timer'
 import Score from '../score'
 
 import enhance from './index.hoc'
-import { Spacer, GameHeaderCol, GameHeaderRow, GameWrapper, SolvedMessage } from './styles'
+import { Spacer, GameHeaderCol, GameHeaderRow, GameWrapper, SolvedMessage, WordWrapper } from './styles'
 
 const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startTimer, timeLeft, updateTimer, score, updateScore, finished, solveAll, solved, markSolved }) => (
   <React.Fragment>
@@ -27,15 +27,20 @@ const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startT
       </GameHeaderCol>
     </GameHeaderRow>
     <GameWrapper>
-      {(started || finished) ? messageArray.map((char, index) => {
-        const symbol = find(code, emoji => emoji.character.toUpperCase() === char.toUpperCase())
-        if (char !== ' ') symbol.character = char
-        return char !== ' ' ? (
-          <CodeSymbol key={index} {...symbol} solveChar={solveChar} stopTimer={stopTimer} updateScore={updateScore} markSolved={markSolved} />
-        ) : (
-          <Spacer key={index} />
-        )
-      }) : (
+      {(started || finished) ? messageArray.map((word, wordIndex) => (
+        <React.Fragment>
+          <WordWrapper>
+            {word.map((char, charIndex) => {
+              const symbol = find(code, emoji => emoji.character.toUpperCase() === char.toUpperCase())
+              symbol.character = char
+              return (
+                <CodeSymbol key={charIndex} {...symbol} solveChar={solveChar} stopTimer={stopTimer} updateScore={updateScore} markSolved={markSolved} />
+              )
+            })}
+          </WordWrapper>
+          <Spacer key={wordIndex} />
+        </React.Fragment>
+      )) : (
         <Text>Tap the Go! button to break the code!</Text>
       )}
       {finished && (

@@ -69,8 +69,12 @@ const enhance = compose(
   ),
   lifecycle({
     componentDidMount () {
-      let messageArray = this.props.message.split('')
-      messageArray.map(character => this.props.getEmoji(character))
+      let messageArray = this.props.message.split(' ')
+      messageArray = messageArray.map(word => {
+        let wordArray = word.split('')
+        wordArray.map(character => this.props.getEmoji(character))
+        return wordArray
+      })
       this.props.setMessageArray(messageArray)
     }
   })

@@ -24,3 +24,7 @@ export const SolvedMessage = styled.p`
   font-weight: bold;
   color: #007DBA;
 `
+
+export const WordWrapper = styled.span`
+  display: inline-block;
+`
