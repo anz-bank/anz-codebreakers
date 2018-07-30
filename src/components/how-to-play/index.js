@@ -16,7 +16,7 @@ const HowToPlay = () => (
         <ol>
           <li>Tap the Go! button.</li>
           <li>Tap on an emoji to select it.</li>
-          <li>Select a letter or symbol you think matches that emoji.</li>
+          <li>Select a letter or symbol on your keyboard you think matches that emoji.</li>
           <li>If you are correct it will solve each instance of that letter or punctuation.</li>
           <li>If you're stuck, use the hint button to solve one letter/symbol.</li>
         </ol>
