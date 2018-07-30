@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import twemoji from 'twemoji'
 import parser from 'html-react-parser'
 
@@ -36,6 +37,17 @@ const WrappedEmoji = ({ code, src, size, block }) => {
       <Emoji {...emojiProps} />
     </EmojiWrapper>
   )
+}
+
+WrappedEmoji.propTypes = {
+  /** The charCode in unicode for the emoji. */
+  code: PropTypes.string,
+  /** The unicode string literal for the emoji. */
+  src: PropTypes.string,
+  /** The size in valid css units of the emoji such as px, em or rem. */
+  size: PropTypes.string,
+  /** Whether the emoji should be displayed as block by css. */
+  block: PropTypes.bool
 }
 
 export default WrappedEmoji
