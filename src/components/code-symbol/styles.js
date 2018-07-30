@@ -4,7 +4,8 @@ export const Character = styled.span`
   font-weight: bold;
   color: #004165;
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
   padding: 0.25rem;
 `
 
@@ -45,4 +46,10 @@ export const HiddenInput = styled.input`
   &:focus {
     background-color: #007DBA;
   }
+`
+
+export const CharacterWrapper = styled.span`
+  text-align: center;
+  width: 40px;
+  display: inline-block;
 `

@@ -3,7 +3,7 @@ import { compose, withStateHandlers } from 'recompose'
 
 import Emoji from '../emoji'
 
-import { Character, InteractiveWrapper, HiddenInput } from './styles'
+import { Character, InteractiveWrapper, HiddenInput, CharacterWrapper } from './styles'
 
 const enhance = compose(
   withStateHandlers(
@@ -20,7 +20,13 @@ const focusInput = (inputRef) => {
 
 const CodeSymbol = ({ emoji, character, solved, solveChar, inputRef, setInputRef, stopTimer, updateScore, markSolved, inputValue }) => {
   if (solved) {
-    return <Character>{character}</Character>
+    return (
+      <Character>
+        <CharacterWrapper>
+          {character}
+        </CharacterWrapper>
+      </Character>
+    )
   } else {
     return (
       <InteractiveWrapper onClick={() => focusInput(inputRef)}>
