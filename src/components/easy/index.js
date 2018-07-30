@@ -21,7 +21,7 @@ const Easy = ({ navigate }) => (
     <AnzRow>
       <EasyCol xs={12}>
         <Section id='easy-section'>
-          <CodeMachine message='Go Girl, Go For IT!' />
+          <CodeMachine message='Go Girl, Go For IT!' description='Break the code to find out the name of the event.' />
         </Section>
       </EasyCol>
     </AnzRow>

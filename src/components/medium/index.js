@@ -21,7 +21,7 @@ const Medium = ({ navigate }) => (
     <AnzRow>
       <MediumCol xs={12}>
         <Section id='medium-section'>
-          <CodeMachine message='ICARE: Integrity, Collaboration, Accountability, Respect and Excellence.' />
+          <CodeMachine message='ICARE: Integrity, Collaboration, Accountability, Respect and Excellence.' description={`This code will let you know ANZ' s core values.`} />
         </Section>
       </MediumCol>
     </AnzRow>

@@ -21,7 +21,7 @@ const Hard = ({ navigate }) => (
     <AnzRow>
       <HardCol xs={12}>
         <Section id='hard-section'>
-          <CodeMachine message={`ANZ's purpose is to shape a world where people and communities thrive. Our people are proud to help people achieve incredible things - be it buying their home, building a business or saving for things big or small.`} />
+          <CodeMachine message={`ANZ's purpose is to shape a world where people and communities thrive. Our people are proud to help people achieve incredible things - be it buying their home, building a business or saving for things big or small.`} description={`Breaking this code will show you ANZ's mission.`} />
         </Section>
       </HardCol>
     </AnzRow>

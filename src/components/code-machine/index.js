@@ -11,10 +11,11 @@ import Timer from '../timer'
 import Score from '../score'
 
 import enhance from './index.hoc'
-import { Spacer, GameHeaderCol, GameHeaderRow, GameWrapper, SolvedMessage, WordWrapper } from './styles'
+import { Spacer, GameHeaderCol, GameHeaderRow, GameWrapper, SolvedMessage, WordWrapper, DescriptionText } from './styles'
 
-const CodeMachine = ({ code, messageArray, solveChar, stopTimer, started, startTimer, timeLeft, updateTimer, score, updateScore, finished, solveAll, solved, markSolved }) => (
+const CodeMachine = ({ description, code, messageArray, solveChar, stopTimer, started, startTimer, timeLeft, updateTimer, score, updateScore, finished, solveAll, solved, markSolved }) => (
   <React.Fragment>
+    {description && <DescriptionText>{description}</DescriptionText>}
     <GameHeaderRow>
       <GameHeaderCol xs={6} md={4}>
         <Score score={score} />
