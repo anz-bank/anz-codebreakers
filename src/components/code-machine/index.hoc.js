@@ -26,6 +26,7 @@ const enhance = compose(
       },
       setMessageArray: () => (messageArray) => ({ messageArray: messageArray }),
       solveChar: ({ code, started, score, timeLeft, finished }) => (event, character, stopTimer, updateScore, markSolved, finish) => {
+        event.preventDefault()
         if (((started || finish) && event.nativeEvent.data.toUpperCase() === character.toUpperCase())) {
           const newCode = cloneDeep(code)
           const symbol = find(newCode, emoji => emoji.character.toUpperCase() === event.nativeEvent.data.toUpperCase())
