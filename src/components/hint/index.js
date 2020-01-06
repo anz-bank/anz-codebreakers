@@ -14,7 +14,7 @@ const enhance = compose(
     ({ solveChar, updateScore, stopTimer, markSolved }) => ({ hintsLeft: 3, solveChar, stopTimer, updateScore, markSolved }),
     {
       hintUsed: ({ hintsLeft }) => () => ({ hintsLeft: hintsLeft - 1 }),
-      useHint: ({ solveChar, updateScore, stopTimer, markSolved }) => (hintUsed, code) => {
+      activateHint: ({ solveChar, updateScore, stopTimer, markSolved }) => (hintUsed, code) => {
         const unsolvedCode = filter(code, emoji => emoji.solved === false)
         const emoji = unsolvedCode[getRandomInt(unsolvedCode.length - 1)]
         const syntheticEvent = { nativeEvent: { data: emoji.character }, hintUsed: true }
@@ -25,16 +25,16 @@ const enhance = compose(
   )
 )
 
-const Hint = ({ useHint, hintsLeft, hintUsed, code, started }) => (
+const Hint = ({ activateHint, hintsLeft, hintUsed, code, started }) => (
   <React.Fragment>
-    <Button type='button' id='hint-button' disabled={hintsLeft === 0 || !started} onClick={() => useHint(hintUsed, code)} appearance='destructive'>I need a hint!</Button>
+    <Button type='button' id='hint-button' disabled={hintsLeft === 0 || !started} onClick={() => activateHint(hintUsed, code)} appearance='destructive'>I need a hint!</Button>
     <HintText>{hintsLeft > 0 ? hintsLeft : `No`} hint{hintsLeft !== 1 && `s`} left</HintText>
   </React.Fragment>
 )
 
 Hint.propTypes = {
   /** Function to use a hint which solves a random symbol and subtracts 1 from the available hints. */
-  useHint: PropTypes.func,
+  activateHint: PropTypes.func,
   /** How many hints are left to be able to be used. */
   hintsLeft: PropTypes.number,
   /** Function to subtract 1 from the available hints. */
