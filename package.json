@@ -7,29 +7,29 @@
   "homepage": "https://anz-bank.github.io/anz-codebreakers/",
   "main": "build/index.js",
   "dependencies": {
-    "@anz/button": "^0.7.2",
-    "@anz/error": "^0.4.2",
-    "@anz/footer": "^0.5.2",
-    "@anz/icon": "^0.6.1",
-    "@anz/masthead": "^0.5.2",
-    "@anz/section": "^0.5.2",
-    "@anz/text-field": "^0.7.2",
-    "@anz/typekit": "^0.1.1",
-    "@anz/validation": "^0.3.2",
+    "@anz/button": "^1.3.0",
+    "@anz/error": "^1.1.3",
+    "@anz/footer": "^1.1.4",
+    "@anz/icon": "^1.2.0",
+    "@anz/masthead": "^1.1.4",
+    "@anz/section": "^1.1.2",
+    "@anz/text-field": "^1.4.0",
+    "@anz/typekit": "^1.0.0",
+    "@anz/validation": "^1.2.1",
     "@reach/router": "^1.1.1",
-    "emoji.json": "^11.0.0",
-    "html-react-parser": "^0.4.6",
+    "emoji.json": "^12.1.1",
+    "html-react-parser": "^0.13.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.2",
     "react-scripts": "^3.3.0",
-    "react-styled-flexboxgrid": "^2.4.0",
-    "recompose": "^0.27.1",
-    "standard": "^11.0.1",
-    "styled-components": "^3.3.3",
+    "react-styled-flexboxgrid": "^3.2.1",
+    "recompose": "^0.30.0",
+    "standard": "^14.3.4",
+    "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.0",
     "tinycolor2": "^1.4.1",
-    "twemoji": "^11.0.0"
+    "twemoji": "^13.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +40,8 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "@babel/helper-call-delegate": "^7.10.1",
+    "gh-pages": "^3.0.0"
   },
   "browserslist": {
     "production": [

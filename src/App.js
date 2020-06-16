@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 
 import Masthead from '@anz/masthead'
 import banner from './assets/US_Navy_Cryptanalytic_Bombe.jpg'
+import { GlobalStyle } from '@anz/styles-global'
 
 import Home from './components/home'
 import Easy from './components/easy'
@@ -15,6 +16,7 @@ const inSubDir = document.location.pathname.match(/anz-codebreakers/)
 
 const App = () => (
   <AnzAppWrapper>
+    <GlobalStyle />
     <Masthead
       maxWidth='1366'
       hero={{
